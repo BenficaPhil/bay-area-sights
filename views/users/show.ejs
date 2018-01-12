@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="profile-card bg-index">
+        <div class="row">
+            <div class="col text-center">
+                <img class="portrait" src="<%= user.avatar %>">
+                <a class="btn btn-warning" href="<%= user.id %>/edit">Edit Profile</a>
+            </div>
+            <div class="col">
+                <h1><%= user.username %></h1>
+                <p><%= user.city %>, CA</p>
+                <p><i class="fa fa-anchor" aria-hidden="true"></i> My Favorite Sight: <br> <%= user.favoriteSight %></p>
+            </div>
+            <div class="col">
+                <h4>About Me</h4>
+                <p><%= user.aboutMe %></p>
+            </div>
+        </div>
+    </div>
+    <h2>Sights I've Submitted</h2>
+    <div class="row margin">
+        <ul>
+            <% sights.forEach(function(sight){ %>
+            <li>
+                <a href="/sights/<%= sight.id %>"><%= sight.name %></a>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron bg-index margin">
+        <div class="container">
+            <h1 class="display-4">Welcome to Bay Area Sights</h1>
+            <p class="lead">View our handpicked sightseeing spots from the California Bay Area</p>
+            <p>
+                <a class="btn btn-lg btn-primary" href="/sights/new">Add New Sight</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Our user-submitted sightseeing spots!</h3>
+        </div>
+    </div>
+    
+    <div class="row">
+        <form class="form-inline" action="/sights" method="GET">
+            <div class="input-group search-bar">
+                <input class="form-control" type="text" name="search" placeholder="Search sights by name">
+                <span class="input-group-btn">
+                    <button class="btn btn-outline-secondary"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <div class="row list-sights">
+        <% if(noMatch !== null){ %>
+            <div class="col">
+                <h4><%= noMatch %></h4>
+            </div>
+        <% } %>
+        
+        <% sights.forEach(function(sight){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="card">
+                <img class="card-img-top img-uniform" src="<%= sight.image %>">
+                <div class="card-body bg-index text-center">
+                    <h5 class="card-title"><%= sight.name %></h4>
+                    <a href="/sights/<%= sight._id %>" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+        
+    </div>
+</div>
+
+<% include ../partials/footer %>

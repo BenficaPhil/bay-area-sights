@@ -1,0 +1,45 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <h1 class="submit-header">Edit <%= sight.name %></h1>
+    <div class="submit-form">
+        <form action="/sights/<%= sight._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Name of sight" value="<%= sight.name %>">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                    <input class="form-control" type="text" name="image" id="image" placeholder="Image URL" value="<%= sight.image %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span>
+                    <input class="form-control" type="text" name="city" id="city" placeholder="City" value="<%= sight.city %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <input class="form-control" type="text" name="location" id="location" placeholder="Enter the name of the sight or an address to generate a Google Map." value="<%= sight.location %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" type="text" name="description" id="description" placeholder="Description" rows="10"><%= sight.description %></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+        <a href="/sights">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

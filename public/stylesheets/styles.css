@@ -1,0 +1,119 @@
+/* General */
+body {
+    background-color: #f4f7f6;
+}
+
+.bg-green {
+    background-color: #3fb0ac;
+}
+
+.bg-index {
+    background-color: #173e43;
+    color: #fae596;
+}
+
+.btn-primary {
+    background-color: #3fb0ac;
+    border-color: #3fb0ac;
+    color: #fff;
+    transition: 0.3s ease-out;
+}
+
+.btn-primary:hover {
+    background-color: #09e2db;
+    border-color: #09e2db;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.alert {
+    margin-top: 1rem; 
+}
+
+.margin {
+    margin: 20px 0px;
+}
+
+.img-thumbnail {
+    padding: 0;
+}
+
+/* Sights Index */
+.search-bar {
+    margin: 10px 0 10px 15px;
+    width: 40%;
+}
+
+.list-sights {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-bottom: 25px;
+}
+
+.img-uniform {
+    height: 170px;
+}
+
+/* Register & Login */
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    margin: 200px auto;
+    width: 40%;
+}
+
+.panel h3 {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.panel form {
+    padding: 30px 0px;
+}
+
+/* Forms */
+.submit-header {
+    margin: 25px;
+    text-align: center;
+}
+
+.submit-form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.delete-form {
+    display: inline;
+}
+
+/* User Profile */
+.profile-card {
+    border-radius: 6px;
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 25px 0px;
+}
+
+.portrait {
+    background-color: gray;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
